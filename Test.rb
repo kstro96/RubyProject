@@ -1,6 +1,5 @@
 require './User Class.rb'
 require './Menu.rb'
-menu = Menu.new()
-menu.puts_menu()
-user = User.new("Alejandro","Kstro96","bugs01")
+Menu.new().puts_menu()
+user = User.new("Alejandro","Kstro96","bugs01", "alejokstro2011@hotmail.com")
 puts user.validate?("Kstro96","buGs01")
