@@ -8,4 +8,10 @@ class User
   def validate? (user , password)
     return @user == user && @password == password ? true : false
   end
+  def name= (name)
+    @name = name
+  end
+  def password= (password)
+    @password = password
+  end
 end
