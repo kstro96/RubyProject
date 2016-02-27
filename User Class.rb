@@ -16,4 +16,6 @@ class User
   def validate? (user , password)
     return @user == user && @password == password
   end
+  def addCourse (name)
+  end
 end
