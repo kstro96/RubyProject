@@ -4,7 +4,7 @@ def Course
     @seats = seats
     @teacher_name = teacher_name
   end
-  def Self.teacher_name
+  def self.teacher_name
     return @teacher_name
   end
   def self.seats
