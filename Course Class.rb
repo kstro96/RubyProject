@@ -3,8 +3,8 @@ def Course
   attr_accessor :seats
   attr_accessor :name
   def initialize (name , seats , teacher_name)
-    @name = name
-    @seats = seats
-    @teacher_name = teacher_name
+    private @name = name
+    private @seats = seats
+    private @teacher_name = teacher_name
   end
 end

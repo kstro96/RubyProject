@@ -1,13 +1,13 @@
 class User
   attr_accessor :name
   attr_writer :password
-  @@code = 0
+  private @@code = 0
   def initialize (name , user_name , password)
-    @name = name
-    @user_name = user_name
-    @password = password
+    private @name = name
+    private @user_name = user_name
+    private @password = password
   end
   def validate? (user , password)
-    return @user == user && @password == password ? true : false
+    return @user == user && @password == password
   end
 end
