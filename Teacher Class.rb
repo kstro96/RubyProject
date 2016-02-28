@@ -1,5 +1,5 @@
 require './User Class.rb'
-def Teacher < User
+class Teacher < User
   def initialize
     super(name , user_name , password)
   end

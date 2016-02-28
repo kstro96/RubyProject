@@ -1,4 +1,4 @@
-def Course
+class Course
   attr_accessor :teacher_name
   attr_accessor :seats
   attr_accessor :name

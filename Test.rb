@@ -1,5 +1,6 @@
 require './User Class.rb'
 require './Menu.rb'
+require './System.rb'
 menu = Menu.new()
 menu.welcome()
 user = User.new("Alejandro","Kstro96","bugs01", "alejokstro2011@hotmail.com")
