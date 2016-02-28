@@ -6,4 +6,7 @@ class Administrator < User
    def validate? (user_name, password)
      super(user_name, password)
    end
+   def validateCourse (course)
+     
+   end
 end

@@ -20,4 +20,10 @@ class Menu
     puts "Option 3: My Teachers. "
     puts "Option 4: My Assignments. "
   end
+  def puts_menu_Administrator
+  puts "Option 1 : "
+  puts "Option 2 : "
+  puts "Option 3 : "
+  puts "Option 4 : "
+  end
 end

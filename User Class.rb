@@ -20,4 +20,13 @@ class User
   def addCourse (name)
     @courses << name
   end
+  def enrollInACourse ()
+
+  end
+  def searchACourse ()
+
+  end
+  def searchATeacher ()
+
+  end
 end
