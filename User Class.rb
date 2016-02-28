@@ -5,12 +5,12 @@ class User
   attr_reader :code
   attr_accessor :email
   @@code = 0
-  @courses = Array.new
   def initialize (name , user_name , password , email)
     @name = name
     @user_name = user_name
     @password = password
     @email = email
+    @courses = []
     @code = @@code
     ++@@code
   end

@@ -8,6 +8,8 @@ class Course
     @seats = seats
     @teacher_name = teacher_name
     @code = @@code
+    @students = []
+    @teachers = []
     ++@@code
   end
 end
