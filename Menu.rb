@@ -1,4 +1,11 @@
 class Menu
+  def welcome
+    puts "-----------------------------------"
+    puts "-----------------------------------"
+    puts "Welcome to your new learning system"
+    puts "-----------------------------------"
+    puts "-----------------------------------"
+  end
   def puts_menu
     puts "Option 1: Log in as User "
     puts "Option 2: Log on as Teacher "

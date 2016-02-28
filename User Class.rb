@@ -13,8 +13,8 @@ class User
     @code = @@code
     ++@@code
   end
-  def validate? (user , password)
-    return @user == user && @password == password
+  def validate? (user_name , password)
+    return (@user_name == user_name && @password == password)
   end
   def addCourse (name)
   end
