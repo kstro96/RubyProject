@@ -5,6 +5,7 @@ class User
   attr_reader :code
   attr_accessor :email
   @@code = 0
+  @courses = Array.new
   def initialize (name , user_name , password , email)
     @name = name
     @user_name = user_name
@@ -17,5 +18,6 @@ class User
     return (@user_name == user_name && @password == password)
   end
   def addCourse (name)
+    @courses << name
   end
 end
