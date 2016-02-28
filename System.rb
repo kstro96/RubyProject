@@ -2,7 +2,9 @@ require './User Class.rb'
 require './Teacher Class.rb'
 require './Course Class.rb'
 class System
-  @courses = 0
-  @users = 0
-  @teachers = 0
+  def initialize(  courses = 0, users = 0, teachers = 0)
+    @courses = courses
+    @users = users
+    @teachers = teachers
+  end
 end

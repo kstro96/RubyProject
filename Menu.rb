@@ -7,4 +7,10 @@ class Menu
     puts "Option 5: "
     puts "Option 6: "
   end
+  def puts_menu_User
+    puts "Option 1: My Account. "
+    puts "Option 2: My Courses. "
+    puts "Option 3: My Teachers. "
+    puts "Option 4: My Assignments. "
+  end
 end
