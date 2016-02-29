@@ -20,7 +20,7 @@ class Menu
     puts "Option 3: Visualize all available courses. "
     puts "Option 4: Create an account"
     puts "Option 5: "
-    puts "Option 6: "
+    puts "Option 6: Log in as Administrator"
   end
   def puts_menu_User()
     puts "Option 1: My Account. "

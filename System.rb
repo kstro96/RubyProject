@@ -24,10 +24,22 @@ class System
   end
   def verifyUser (user_name, password)
     unless(@users.empty?)
-      @users.each do |user|
-        if(user.validate?(user_name, password))
-          return true
-        end
+      possibleUser = searchUser(user_name)
+      if (possibleUser != nil)
+        return possibleUser.validate?(user_name, password)
+      else
+        return false
+      end
+    end
+    return false
+  end
+  def verifyAdmin (user_name, password)
+    unless(@administrator.empty?)
+      possibleAdmin = searchAdministrator(user_name)
+      if(possibleAdmin != nil)
+        return possibleUser.validate?(user_name, password)
+      else
+        return false
       end
     end
     return false
@@ -35,15 +47,20 @@ class System
   def aggregateUser (name, user_name, password, email)
     if (@users.empty?)
       @users << User.new(name, user_name, password, email)
+      return true
     else
-
+      if(@users[user_name]==nil)
+        @users << User.new(name, user_name, password, email)
+        return true
+      else
+        return false
+      end
     end
   end
   private def searchUser (user_name)
-    @users.each do |user|
-      if (user.user_name==user_name)
-        return 
-      end
-    end
+    return @users[user_name]
+  end
+  private def searchAdministrator(user_name)
+    return @administrator[user_name]
   end
 end

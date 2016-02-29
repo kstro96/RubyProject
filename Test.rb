@@ -7,7 +7,6 @@ platform = menu.systemWelcome()
 system("cls")
 platform.administrator.each { |admin|  puts admin.name}
 puts platform.users.empty?
-puts (-4)**0.5
 begin
   menu.welcome(platform)
   menu.puts_menu()
@@ -30,7 +29,11 @@ begin
   when 5
     puts "5"
   when 6
-    puts "6"
+    puts "User: "
+    name = gets.chomp
+    puts "Password: "
+    password = gets.chomp
+    puts platform.verifyAdmin(name, password)
   else
     system("cls")
     puts "===================================================="
