@@ -22,4 +22,10 @@ class System
   def aggregateAdministrator(nameAdministrator, user_nameAdministrator, administratorPassword, admistratorEmail)
     @administrator << Administrator.new(nameAdministrator, user_nameAdministrator, administratorPassword, admistratorEmail)
   end
+  def verifyUser (user_name, password)
+
+  end
+  def aggregateUser (name, user_name, password, email)
+
+  end
 end
