@@ -4,6 +4,8 @@ class User
   attr_writer :password
   attr_reader :code
   attr_accessor :email
+  attr_accessor :user_name
+  attr_reader :courses
   @@code = 0
   def initialize (name , user_name , password , email)
     @name = name

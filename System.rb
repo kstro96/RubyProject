@@ -8,12 +8,13 @@ class System
   attr_accessor :users
   attr_accessor :administrator
   attr_accessor :courses
-  def initialize(  coursesQuantity = 0, usersQuantity = 0, teachersQuantity = 0)
+  def initialize(nameAdministrator, user_nameAdministrator, administratorPassword, admistratorEmail, coursesQuantity = 0, usersQuantity = 0, teachersQuantity = 0)
     @coursesQuantity = coursesQuantity
     @usersQuantity = usersQuantity
     @teachersQuantity = teachersQuantity
     @users = []
     @administrator = []
     @courses = []
+    @administrator << Administrator.new(nameAdministrator, user_nameAdministrator, administratorPassword, admistratorEmail)
   end
 end
