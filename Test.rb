@@ -7,6 +7,7 @@ platform = menu.systemWelcome()
 system("cls")
 platform.administrator.each { |admin|  puts admin.name}
 puts platform.users.empty?
+puts (-4)**0.5
 begin
   menu.welcome(platform)
   menu.puts_menu()

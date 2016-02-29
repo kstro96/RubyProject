@@ -23,9 +23,19 @@ class System
     @administrator << Administrator.new(nameAdministrator, user_nameAdministrator, administratorPassword, admistratorEmail)
   end
   def verifyUser (user_name, password)
-
+    unless(@users.empty?)
+      @users.each do |user|
+        if(user.validate?(user_name, password))
+          return true
+        end
+      end
+    end
+    return false
   end
   def aggregateUser (name, user_name, password, email)
-
+    if (@users.empty?)
+      @users << User.new(name, user_name, password, email)
+    else
+    end
   end
 end
