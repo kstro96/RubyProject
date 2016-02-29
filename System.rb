@@ -36,6 +36,14 @@ class System
     if (@users.empty?)
       @users << User.new(name, user_name, password, email)
     else
+
+    end
+  end
+  private def searchUser (user_name)
+    @users.each do |user|
+      if (user.user_name==user_name)
+        return 
+      end
     end
   end
 end
