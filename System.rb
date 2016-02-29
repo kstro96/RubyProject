@@ -8,7 +8,9 @@ class System
   attr_reader :users
   attr_reader :administrator
   attr_reader :courses
-  def initialize(nameAdministrator, user_nameAdministrator, administratorPassword, admistratorEmail, coursesQuantity = 0, usersQuantity = 0, teachersQuantity = 0)
+  attr_reader :name
+  def initialize(name, nameAdministrator="admin", user_nameAdministrator="admin", administratorPassword="admin", admistratorEmail="admin@admin.com", coursesQuantity = 0, usersQuantity = 0, teachersQuantity = 0)
+    @name = name
     @coursesQuantity = coursesQuantity
     @usersQuantity = usersQuantity
     @teachersQuantity = teachersQuantity

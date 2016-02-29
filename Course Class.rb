@@ -15,4 +15,7 @@ class Course
     @assignments = []
     ++@@code
   end
+  def createAssignment (name, datePosted, dateDelivered, maxGrade)
+
+  end
 end
