@@ -23,14 +23,18 @@ class System
     @administrator << Administrator.new(nameAdministrator, user_nameAdministrator, administratorPassword, admistratorEmail)
   end
   def verifyUser (user_name, password)
-
+      unless (@users.empty?)
+        
+      end
   end
   def verifyAdmin (user_name, password)
     unless (@administrator.empty?)
     end
   end
   def aggregateUser (name, user_name, password, email)
+      unless (@users.empty?)
 
+      end
   end
   private def searchUser (user_name)
     @users.each do |user|
@@ -54,6 +58,6 @@ class System
         return course
       end
     end
-    return nil 
+    return nil
   end
 end
