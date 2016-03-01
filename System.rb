@@ -23,44 +23,37 @@ class System
     @administrator << Administrator.new(nameAdministrator, user_nameAdministrator, administratorPassword, admistratorEmail)
   end
   def verifyUser (user_name, password)
-    unless(@users.empty?)
-      possibleUser = searchUser(user_name)
-      if (possibleUser != nil)
-        return possibleUser.validate?(user_name, password)
-      else
-        return false
-      end
-    end
-    return false
+
   end
   def verifyAdmin (user_name, password)
-    unless(@administrator.empty?)
-      possibleAdmin = searchAdministrator(user_name)
-      if(possibleAdmin != nil)
-        return possibleUser.validate?(user_name, password)
-      else
-        return false
-      end
+    unless (@administrator.empty?)
     end
-    return false
   end
   def aggregateUser (name, user_name, password, email)
-    if (@users.empty?)
-      @users << User.new(name, user_name, password, email)
-      return true
-    else
-      if(@users[user_name]==nil)
-        @users << User.new(name, user_name, password, email)
-        return true
-      else
-        return false
-      end
-    end
+
   end
   private def searchUser (user_name)
-    return @users[user_name]
+    @users.each do |user|
+      if (user.user_name==user_name)
+        return user
+      end
+    end
+    return nil
   end
   private def searchAdministrator(user_name)
-    return @administrator[user_name]
+    @administrator.each do |admin|
+      if (admin.user_name == user_name)
+        return admin
+      end
+    end
+    return nil
+  end
+  private def searchCourse (name)
+    @courses.each do |course|
+      if (course.name == name)
+        return course
+      end
+    end
+    return nil 
   end
 end
