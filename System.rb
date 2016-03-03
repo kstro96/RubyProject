@@ -24,11 +24,16 @@ class System
   end
   def verifyUser (user_name, password)
       unless (@users.empty?)
-        
+        unless (self.searchUser(user_name)==nil)
+
+        end
       end
   end
   def verifyAdmin (user_name, password)
     unless (@administrator.empty?)
+      unless (self.searchAdministrator(user_name)==nil)
+
+      end
     end
   end
   def aggregateUser (name, user_name, password, email)

@@ -18,18 +18,25 @@ begin
     print "Password: "
     password = gets.chomp
   when 2
-    print "User: "
+    print "User name: "
     name = gets.chomp
     print "Password: "
     password = gets.chomp
   when 3
     puts "3"
   when 4
-    puts "4"
+    puts "User name: "
+    user_name = gets.chomp
+    puts "Password: "
+    password = gets.chomp
+    puts "Confirm password: "
+    confirmPassword = gets.chomp
+    puts "Email address: "
+    email = gets.chomp
   when 5
     puts "5"
   when 6
-    puts "User: "
+    puts "User name: "
     name = gets.chomp
     puts "Password: "
     password = gets.chomp
