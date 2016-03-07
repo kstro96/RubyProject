@@ -7,6 +7,7 @@ platform = menu.systemWelcome()
 system("cls")
 platform.administrator.each { |admin|  puts admin.name}
 puts platform.users.empty?
+platform.aggregateUser("Alejandro", "kstro96", "bugs01", "Alejo@alejo.com")
 begin
   menu.welcome(platform)
   menu.puts_menu()
@@ -17,6 +18,11 @@ begin
     name = gets.chomp
     print "Password: "
     password = gets.chomp
+    if(platform.verifyUser(name, password) != nil)
+      puts "CORRECTO"
+    else
+      puts "INCORRECTO"
+    end
   when 2
     print "User name: "
     name = gets.chomp

@@ -23,25 +23,16 @@ class System
     @administrator << Administrator.new(nameAdministrator, user_nameAdministrator, administratorPassword, admistratorEmail)
   end
   def verifyUser (user_name, password)
-      unless (@users.empty?)
-        unless (self.searchUser(user_name)==nil)
-
-        end
-      end
+        return searchUser(user_name)
   end
   def verifyAdmin (user_name, password)
-    unless (@administrator.empty?)
-      unless (self.searchAdministrator(user_name)==nil)
-
-      end
-    end
+      return searchAdministrator(user_name)
   end
   def aggregateUser (name, user_name, password, email)
-      unless (@users.empty?)
-
-      end
+      @users << User.new(name, user_name, password, email)
   end
-  private def searchUser (user_name)
+  private
+  def searchUser (user_name)
     @users.each do |user|
       if (user.user_name==user_name)
         return user
@@ -49,7 +40,8 @@ class System
     end
     return nil
   end
-  private def searchAdministrator(user_name)
+  private
+  def searchAdministrator(user_name)
     @administrator.each do |admin|
       if (admin.user_name == user_name)
         return admin
@@ -57,7 +49,8 @@ class System
     end
     return nil
   end
-  private def searchCourse (name)
+  private
+  def searchCourse (name)
     @courses.each do |course|
       if (course.name == name)
         return course
